@@ -1,56 +1,83 @@
 # 1일1알고리즘
 
+25.05.16. [\[Bronze Ⅲ\] 최댓값 - 2562](./Baekjoon/Bronze/2562.%20최댓값)
+
+```java
+import java.util.Scanner;
+
+public class BOJ2562 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] nums = new int[9];
+        int max = 0, index = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = sc.nextInt();
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (max < nums[i]) {
+                max = nums[i];
+                index = i;
+            }
+        }
+
+        System.out.printf("%d\n%d", max, index + 1);
+    }
+}
+```
+
 25.05.15. [\[Bronze Ⅲ\] 오븐 시계 - 2525](./Baekjoon/Bronze/2525.%20오븐%20시계)
 
 ```java
-	import java.util.Scanner;
+import java.util.Scanner;
 
-	public class BOJ2525 {
-		public static void main(String[] args) {
-			Scanner sc = new Scanner(System.in);
-			int h = sc.nextInt(), m = sc.nextInt(), t = sc.nextInt();
+public class BOJ2525 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int h = sc.nextInt(), m = sc.nextInt(), t = sc.nextInt();
 
-			h += t / 60;
-			m += t % 60;
+		h += t / 60;
+		m += t % 60;
 
-			if (m >= 60) {
-				h++;
-				m -= 60;
-			}
-
-			if (h >= 24) {
-				h -= 24;
-			}
-
-			System.out.printf("%d %d", h, m);
+		if (m >= 60) {
+			h++;
+			m -= 60;
 		}
+
+		if (h >= 24) {
+			h -= 24;
+		}
+
+		System.out.printf("%d %d", h, m);
 	}
+}
 ```
 
 25.05.14. [\[Bronze Ⅲ\] 알람 시계 - 2884](./Baekjoon/Bronze/2884.%20알람%20시계)
 
 ```java
-	import java.util.Scanner;
+import java.util.Scanner;
 
-	public class BOJ2884 {
-		public static void main(String[] args) {
-			Scanner sc = new Scanner(System.in);
-			int h = sc.nextInt(), m= sc.nextInt();
+public class BOJ2884 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int h = sc.nextInt(), m= sc.nextInt();
 
-			if (m - 45 < 0) {
-				h--;
-				m += 15;
-			} else {
-				m -= 45;
-			}
-
-			if (h < 0) {
-				h = 23;
-			}
-
-			System.out.printf("%d %d", h, m);
+		if (m - 45 < 0) {
+			h--;
+			m += 15;
+		} else {
+			m -= 45;
 		}
+
+		if (h < 0) {
+			h = 23;
+		}
+
+		System.out.printf("%d %d", h, m);
 	}
+}
 ```
 
 25.05.13. [\[Bronze Ⅴ\] 사칙연산 - 10869](./Baekjoon/Bronze/10869.%20사칙연산)
@@ -72,5 +99,6 @@ public class BOJ10869 {
 ### [백준]
 
 [2525](./Baekjoon/Bronze/2525.%20오븐%20시계)
+[2562](./Baekjoon/Bronze/2562.%20최댓값)
 [2884](./Baekjoon/Bronze/2884.%20알람%20시계)
 [10869](./Baekjoon/Bronze/10869.%20사칙연산)
