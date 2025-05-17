@@ -1,5 +1,32 @@
 # 1일1알고리즘
 
+25.05.17. [\[Bronze Ⅰ\] 평균 - 1546](./Baekjoon/Bronze/1546.%평균)
+
+```java
+import java.util.Scanner;
+
+public class BOJ1546 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double[] nums = new double[sc.nextInt()];
+        double max = 0, sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = sc.nextInt();
+
+            if (max < nums[i]) {
+                max = nums[i];
+            }
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            sum += nums[i] / max * 100;
+        }
+
+        System.out.println(sum / nums.length);
+    }
+}
+```
+
 25.05.16. [\[Bronze Ⅲ\] 최댓값 - 2562](./Baekjoon/Bronze/2562.%20최댓값)
 
 ```java
