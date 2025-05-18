@@ -1,6 +1,36 @@
 # 1일1알고리즘
 
-25.05.17. [\[Bronze Ⅰ\] 평균 - 1546](./Baekjoon/Bronze/1546.%평균)
+25.05.18. [\[Bronze Ⅱ\] 알파벳 찾기 - 10809](./Baekjoon/Bronze/10809.%20알파벳%20찾기)
+
+```java
+import java.util.Scanner;
+
+public class BOJ10809 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String S = sc.next();
+        int[] nums = new int[26];
+        char c = ' ';
+
+        for (int i = 0; i < 26; i++) {
+            nums[i] = -1;
+        }
+
+        for (int i = 0; i < S.length(); i++) {
+            c = S.charAt(i);
+            if (nums[c - 'a'] == -1) {
+                nums[c - 'a'] = i;
+            }
+        }
+
+        for (int num : nums) {
+            System.out.print(num + " ");
+        }
+    }
+}
+```
+
+25.05.17. [\[Bronze Ⅰ\] 평균 - 1546](./Baekjoon/Bronze/1546.%20평균)
 
 ```java
 import java.util.Scanner;
@@ -107,25 +137,13 @@ public class BOJ2884 {
 }
 ```
 
-25.05.13. [\[Bronze Ⅴ\] 사칙연산 - 10869](./Baekjoon/Bronze/10869.%20사칙연산)
-
-```java
-import java.util.Scanner;
-
-public class BOJ10869 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt(), b= sc.nextInt();
-        System.out.printf("%d %d %d %d %d", a + b, a - b, a * b, a / b, a % b);
-    }
-}
-```
-
 ---
 
 ### [백준]
 
+[1546](./Baekjoon/Bronze/1546.%20평균)
 [2525](./Baekjoon/Bronze/2525.%20오븐%20시계)
 [2562](./Baekjoon/Bronze/2562.%20최댓값)
 [2884](./Baekjoon/Bronze/2884.%20알람%20시계)
+[10809](./Baekjoon/Bronze/10809.%20알파벳%20찾기)
 [10869](./Baekjoon/Bronze/10869.%20사칙연산)
