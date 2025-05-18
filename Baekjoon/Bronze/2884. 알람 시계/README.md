@@ -1,4 +1,4 @@
-# [Bronze Ⅲ] 알람 시계 - 2884
+# [Bronze Ⅲ] 2884. 알람 시계
 
 [문제 링크](https://www.acmicpc.net/problem/2884)
 

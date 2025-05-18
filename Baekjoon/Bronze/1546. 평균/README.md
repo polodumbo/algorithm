@@ -1,4 +1,4 @@
-# [Bronze Ⅰ] 평균 - 1546
+# [Bronze Ⅰ] 1546. 평균
 
 [문제 링크](https://www.acmicpc.net/problem/1546)
 

@@ -1,4 +1,4 @@
-# [Bronze Ⅲ] 최댓값 - 2562
+# [Bronze Ⅲ] 2562. 최댓값
 
 [문제 링크](https://www.acmicpc.net/problem/2562)
 

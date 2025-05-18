@@ -1,4 +1,4 @@
-# [Bronze Ⅴ] 사칙연산 - 10869
+# [Bronze Ⅴ] 10869. 사칙연산
 
 [문제 링크](https://www.acmicpc.net/problem/10869)
 

@@ -1,6 +1,6 @@
 # 1일1알고리즘
 
-25.05.18. [\[Bronze Ⅱ\] 알파벳 찾기 - 10809](./Baekjoon/Bronze/10809.%20알파벳%20찾기)
+25.05.18. [\[Bronze Ⅱ\] 10809. 알파벳 찾기](./Baekjoon/Bronze/10809.%20알파벳%20찾기)
 
 ```java
 import java.util.Scanner;
@@ -30,7 +30,7 @@ public class BOJ10809 {
 }
 ```
 
-25.05.17. [\[Bronze Ⅰ\] 평균 - 1546](./Baekjoon/Bronze/1546.%20평균)
+25.05.17. [\[Bronze Ⅰ\] 1546. 평균](./Baekjoon/Bronze/1546.%20평균)
 
 ```java
 import java.util.Scanner;
@@ -57,7 +57,7 @@ public class BOJ1546 {
 }
 ```
 
-25.05.16. [\[Bronze Ⅲ\] 최댓값 - 2562](./Baekjoon/Bronze/2562.%20최댓값)
+25.05.16. [\[Bronze Ⅲ\] 2562. 최댓값](./Baekjoon/Bronze/2562.%20최댓값)
 
 ```java
 import java.util.Scanner;
@@ -84,7 +84,7 @@ public class BOJ2562 {
 }
 ```
 
-25.05.15. [\[Bronze Ⅲ\] 오븐 시계 - 2525](./Baekjoon/Bronze/2525.%20오븐%20시계)
+25.05.15. [\[Bronze Ⅲ\] 2525. 오븐 시계](./Baekjoon/Bronze/2525.%20오븐%20시계)
 
 ```java
 import java.util.Scanner;
@@ -111,7 +111,7 @@ public class BOJ2525 {
 }
 ```
 
-25.05.14. [\[Bronze Ⅲ\] 알람 시계 - 2884](./Baekjoon/Bronze/2884.%20알람%20시계)
+25.05.14. [\[Bronze Ⅲ\] 2884. 알람 시계](./Baekjoon/Bronze/2884.%20알람%20시계)
 
 ```java
 import java.util.Scanner;
