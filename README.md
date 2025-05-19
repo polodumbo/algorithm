@@ -1,5 +1,43 @@
 # 1일1알고리즘
 
+25.05.19. [\[Bronze Ⅰ\] 1157. 단어 공부](./Baekjoon/Bronze/1157.%20단어%20공부)
+
+```java
+import java.util.Scanner;
+
+public class BOJ1157 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String S = sc.next();
+        int[] nums = new int[26];
+        char c = ' ';
+
+        for (int i = 0; i < S.length(); i++) {
+            c = S.charAt(i);
+            if (c >= 65 && c <= 90) {
+                nums[c - 'A']++;
+            } else {
+                nums[c - 'a']++;
+            }
+        }
+
+        int max = -1;
+
+        for (int i = 0; i < 26; i++) {
+            if (nums[i] > max) {
+                max = nums[i];
+                c = (char) (i + 65);
+            } else if (nums[i] == max) {
+                c = '?';
+            }
+        }
+
+        System.out.println(c);
+
+    }
+}
+```
+
 25.05.18. [\[Bronze Ⅱ\] 10809. 알파벳 찾기](./Baekjoon/Bronze/10809.%20알파벳%20찾기)
 
 ```java
@@ -141,6 +179,7 @@ public class BOJ2884 {
 
 ### [백준]
 
+[1157](./Baekjoon/Bronze/1157.%20단어%20공부)
 [1546](./Baekjoon/Bronze/1546.%20평균)
 [2525](./Baekjoon/Bronze/2525.%20오븐%20시계)
 [2562](./Baekjoon/Bronze/2562.%20최댓값)
