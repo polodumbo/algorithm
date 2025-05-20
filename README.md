@@ -1,5 +1,41 @@
 # 1일1알고리즘
 
+25.05.20. [\[Bronze Ⅰ\] 10798. 세로읽기](./Baekjoon/Bronze/10798.%20세로읽기)
+
+```java
+import java.util.Scanner;
+
+public class BOJ10798 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        char[][] cs = new char[5][15];
+        int max = 0;
+
+        for (int i = 0; i < cs.length; i++) {
+            String str = sc.next();
+
+            if (str.length() > max) {
+                max = str.length();
+            }
+
+            for (int j = 0; j < str.length(); j++) {
+                cs[i][j] = str.charAt(j);
+            }
+        }
+
+        for (int i = 0; i < max; i++) {
+            for (int j = 0; j < cs.length; j++) {
+                if (cs[j][i] == '\0') {
+                    continue;
+                }
+                System.out.print(cs[j][i]);
+            }
+        }
+    }
+}
+```
+
 25.05.19. [\[Bronze Ⅰ\] 1157. 단어 공부](./Baekjoon/Bronze/1157.%20단어%20공부)
 
 ```java
@@ -149,32 +185,6 @@ public class BOJ2525 {
 }
 ```
 
-25.05.14. [\[Bronze Ⅲ\] 2884. 알람 시계](./Baekjoon/Bronze/2884.%20알람%20시계)
-
-```java
-import java.util.Scanner;
-
-public class BOJ2884 {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int h = sc.nextInt(), m= sc.nextInt();
-
-		if (m - 45 < 0) {
-			h--;
-			m += 15;
-		} else {
-			m -= 45;
-		}
-
-		if (h < 0) {
-			h = 23;
-		}
-
-		System.out.printf("%d %d", h, m);
-	}
-}
-```
-
 ---
 
 ### [백준]
@@ -184,5 +194,6 @@ public class BOJ2884 {
 [2525](./Baekjoon/Bronze/2525.%20오븐%20시계)
 [2562](./Baekjoon/Bronze/2562.%20최댓값)
 [2884](./Baekjoon/Bronze/2884.%20알람%20시계)
+[10798](./Baekjoon/Bronze/10798.%20세로읽기)
 [10809](./Baekjoon/Bronze/10809.%20알파벳%20찾기)
 [10869](./Baekjoon/Bronze/10869.%20사칙연산)
