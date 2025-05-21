@@ -1,5 +1,35 @@
 # 1일1알고리즘
 
+25.05.21. [\[Silver Ⅰ\] 2563. 색종이](./Baekjoon/Silver/2563.%20색종이)
+
+```java
+import java.util.Scanner;
+
+public class BOJ2563 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        boolean[][] whites = new boolean[100][100];
+        int paperCount = sc.nextInt();
+        int area = 0;
+
+        for (int i = 0; i < paperCount; i++) {
+            int x = sc.nextInt();
+            int y = sc.nextInt();
+            for (int j = x; j < x + 10; j++) {
+                for (int k = y; k < y + 10; k++) {
+                    if (!whites[j][k]) {
+                        whites[j][k] = true;
+                        area++;
+                    }
+                }
+            }
+        }
+
+        System.out.println(area);
+    }
+}
+```
+
 25.05.20. [\[Bronze Ⅰ\] 10798. 세로읽기](./Baekjoon/Bronze/10798.%20세로읽기)
 
 ```java
@@ -193,6 +223,7 @@ public class BOJ2525 {
 [1546](./Baekjoon/Bronze/1546.%20평균)
 [2525](./Baekjoon/Bronze/2525.%20오븐%20시계)
 [2562](./Baekjoon/Bronze/2562.%20최댓값)
+[2563](./Baekjoon/Bronze/2563.%20색종이)
 [2884](./Baekjoon/Bronze/2884.%20알람%20시계)
 [10798](./Baekjoon/Bronze/10798.%20세로읽기)
 [10809](./Baekjoon/Bronze/10809.%20알파벳%20찾기)
