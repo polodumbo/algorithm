@@ -1,6 +1,36 @@
 # 1일1알고리즘
 
-25.05.21. [\[Silver Ⅰ\] 2563. 색종이](./Baekjoon/Silver/2563.%20색종이)
+25.05.22. [\[Bronze Ⅰ\] 2869. 달팽이는 올라가고 싶다](./Baekjoon/Bronze/2869.%20달팽이는%20올라가고%20싶다)
+
+```java
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class BOJ2869 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer strtk = new StringTokenizer(br.readLine(), " ");
+
+        int nClimb = Integer.parseInt(strtk.nextToken());
+        int nFall = Integer.parseInt(strtk.nextToken());
+        int nTop = Integer.parseInt(strtk.nextToken());
+
+        br.close();
+
+        int nDay = (nTop - nFall) / (nClimb - nFall);
+
+        if ((nTop - nFall) % (nClimb -nFall) != 0) {
+            nDay++;
+        }
+
+        System.out.println(nDay);
+    }
+}
+```
+
+25.05.21. [\[Silver Ⅴ\] 2563. 색종이](./Baekjoon/Silver/2563.%20색종이)
 
 ```java
 import java.util.Scanner;
@@ -188,33 +218,6 @@ public class BOJ2562 {
 }
 ```
 
-25.05.15. [\[Bronze Ⅲ\] 2525. 오븐 시계](./Baekjoon/Bronze/2525.%20오븐%20시계)
-
-```java
-import java.util.Scanner;
-
-public class BOJ2525 {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int h = sc.nextInt(), m = sc.nextInt(), t = sc.nextInt();
-
-		h += t / 60;
-		m += t % 60;
-
-		if (m >= 60) {
-			h++;
-			m -= 60;
-		}
-
-		if (h >= 24) {
-			h -= 24;
-		}
-
-		System.out.printf("%d %d", h, m);
-	}
-}
-```
-
 ---
 
 ### [백준]
@@ -223,7 +226,8 @@ public class BOJ2525 {
 [1546](./Baekjoon/Bronze/1546.%20평균)
 [2525](./Baekjoon/Bronze/2525.%20오븐%20시계)
 [2562](./Baekjoon/Bronze/2562.%20최댓값)
-[2563](./Baekjoon/Bronze/2563.%20색종이)
+[2563](./Baekjoon/Silver/2563.%20색종이)
+[2869](./Baekjoon/Bronze/2869.%20달팽이는%20올라가고%20싶다)
 [2884](./Baekjoon/Bronze/2884.%20알람%20시계)
 [10798](./Baekjoon/Bronze/10798.%20세로읽기)
 [10809](./Baekjoon/Bronze/10809.%20알파벳%20찾기)

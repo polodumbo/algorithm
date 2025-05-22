@@ -1,4 +1,4 @@
-# [Silver Ⅰ] 2563. 색종이
+# [Silver Ⅴ] 2563. 색종이
 
 [문제 링크](https://www.acmicpc.net/problem/2563)
 
