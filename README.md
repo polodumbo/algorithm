@@ -1,5 +1,38 @@
 # 1일1알고리즘
 
+25.05.24. [\[Bronze Ⅲ\] 2501. 약수 구하기](./Baekjoon/Bronze/2501.%20약수%20구하기)
+
+```java
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class BOJ2501 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer strtk = new StringTokenizer(br.readLine(), " ");
+
+        int num1 = Integer.parseInt(strtk.nextToken());
+        int num2 = Integer.parseInt(strtk.nextToken());
+        int count = 0, result = 0;
+
+        for (int i = 1; i <= num1; i++) {
+            if (num1 % i == 0) {
+                count++;
+            }
+
+            if (count == num2) {
+                result = i;
+                break;
+            }
+        }
+
+        System.out.println(result);
+    }
+}
+```
+
 25.05.22. [\[Bronze Ⅰ\] 2869. 달팽이는 올라가고 싶다](./Baekjoon/Bronze/2869.%20달팽이는%20올라가고%20싶다)
 
 ```java
