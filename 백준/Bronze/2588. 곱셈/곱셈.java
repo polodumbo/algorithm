@@ -8,13 +8,10 @@ public class Main {
 
         int a = Integer.parseInt(br.readLine());
         int b = Integer.parseInt(br.readLine());
-        int temp = b;
 
-        for (int i = 0; i < 3; i++) {
-            System.out.println(a * (temp % 10));
-            temp /= 10;
-        }
-
+        System.out.println(a * (b % 10));
+        System.out.println(a * (b / 10 % 10));
+        System.out.println(a * (b / 100 % 10));
         System.out.println(a * b);
         br.close();
     }
