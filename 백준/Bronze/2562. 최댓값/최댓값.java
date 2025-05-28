@@ -1,23 +1,23 @@
-import java.sql.Array;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int[] nums = new int[9];
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
         int max = 0, index = 0;
 
-        for (int i = 0; i < nums.length; i++) {
-            nums[i] = sc.nextInt();
-        }
+        for (int i = 0; i < 9; i++) {
+            int n = Integer.parseInt(br.readLine());
 
-        for (int i = 0; i < nums.length; i++) {
-            if (max < nums[i]) {
-                max = nums[i];
-                index = i;
+            if (n > max) {
+                max = n;
+                index = i + 1;
             }
         }
 
-        System.out.printf("%d\n%d", max, index + 1);
+        System.out.println(max + "\n" + index);
+        br.close();
     }
 }
