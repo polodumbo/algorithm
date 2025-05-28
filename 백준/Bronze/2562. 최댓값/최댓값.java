@@ -8,6 +8,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
         List<Integer> numList = new ArrayList<>();
 
         for (int i = 0; i < 9; i++) {
@@ -15,9 +16,10 @@ public class Main {
         }
 
         int max = Collections.max(numList);
-        int index = numList.indexOf(max) + 1;
+        int index = numList.indexOf(max);
 
-        System.out.println(max + "\n" + index);
+        sb.append(max).append("\n").append(index + 1);
+        System.out.println(sb);
         br.close();
     }
 }
