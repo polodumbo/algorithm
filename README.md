@@ -1,193 +1,53 @@
 # 1일1알고리즘
 
-[\[Bronze Ⅰ\] 9506. 약수들의 합](./Baekjoon/Bronze/9506.%20약수들의%20합)
-
-```java
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
-
-public class BOJ9506 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder strbd = new StringBuilder();
-
-        while (true) {
-            int num = Integer.parseInt(br.readLine());
-            if (num == -1) break;
-
-            List<Integer> divisors = new ArrayList<>();
-            int sum = 0;
-            for (int i = 1; i < num; i++) {
-                if (num % i == 0) {
-                    divisors.add(i);
-                    sum += i;
-                }
-            }
-
-            strbd.append(num);
-            if (sum == num) {
-                strbd.append(" = ");
-                for (int i = 0; i < divisors.size(); i++) {
-                    strbd.append(divisors.get(i) + " + ");
-                }
-                strbd.replace(strbd.length() - 3, strbd.length(), "");
-            } else {
-                strbd.append(" is NOT perfect.");
-            }
-            strbd.append("\n");
-        }
-
-        System.out.println(strbd);
-        br.close();
-    }
-}
-```
-
-[\[Bronze Ⅲ\] 2501. 약수 구하기](./Baekjoon/Bronze/2501.%20약수%20구하기)
-
-```java
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
-
-public class BOJ2501 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer strtk = new StringTokenizer(br.readLine(), " ");
-
-        int num1 = Integer.parseInt(strtk.nextToken());
-        int num2 = Integer.parseInt(strtk.nextToken());
-        int count = 0, result = 0;
-
-        for (int i = 1; i <= num1; i++) {
-            if (num1 % i == 0) {
-                count++;
-            }
-
-            if (count == num2) {
-                result = i;
-                break;
-            }
-        }
-
-        System.out.println(result);
-    }
-}
-```
-
-[\[Bronze Ⅰ\] 2869. 달팽이는 올라가고 싶다](./Baekjoon/Bronze/2869.%20달팽이는%20올라가고%20싶다)
-
-```java
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
-
-public class BOJ2869 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer strtk = new StringTokenizer(br.readLine(), " ");
-
-        int nClimb = Integer.parseInt(strtk.nextToken());
-        int nFall = Integer.parseInt(strtk.nextToken());
-        int nTop = Integer.parseInt(strtk.nextToken());
-
-        br.close();
-
-        int nDay = (nTop - nFall) / (nClimb - nFall);
-
-        if ((nTop - nFall) % (nClimb -nFall) != 0) {
-            nDay++;
-        }
-
-        System.out.println(nDay);
-    }
-}
-```
-
-[\[Silver Ⅴ\] 2563. 색종이](./Baekjoon/Silver/2563.%20색종이)
-
-```java
-import java.util.Scanner;
-
-public class BOJ2563 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        boolean[][] whites = new boolean[100][100];
-        int paperCount = sc.nextInt();
-        int area = 0;
-
-        for (int i = 0; i < paperCount; i++) {
-            int x = sc.nextInt();
-            int y = sc.nextInt();
-            for (int j = x; j < x + 10; j++) {
-                for (int k = y; k < y + 10; k++) {
-                    if (!whites[j][k]) {
-                        whites[j][k] = true;
-                        area++;
-                    }
-                }
-            }
-        }
-
-        System.out.println(area);
-    }
-}
-```
-
-[\[Bronze Ⅰ\] 10798. 세로읽기](./Baekjoon/Bronze/10798.%20세로읽기)
-
-```java
-import java.util.Scanner;
-
-public class BOJ10798 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        char[][] cs = new char[5][15];
-        int max = 0;
-
-        for (int i = 0; i < cs.length; i++) {
-            String str = sc.next();
-
-            if (str.length() > max) {
-                max = str.length();
-            }
-
-            for (int j = 0; j < str.length(); j++) {
-                cs[i][j] = str.charAt(j);
-            }
-        }
-
-        for (int i = 0; i < max; i++) {
-            for (int j = 0; j < cs.length; j++) {
-                if (cs[j][i] == '\0') {
-                    continue;
-                }
-                System.out.print(cs[j][i]);
-            }
-        }
-    }
-}
-```
-
----
-
 ### [백준]
 
-[1157](./Baekjoon/Bronze/1157.%20단어%20공부)
-[1546](./Baekjoon/Bronze/1546.%20평균)
-[2501](./Baekjoon/Bronze/2501.%20약수%20구하기)
-[2525](./Baekjoon/Bronze/2525.%20오븐%20시계)
-[2562](./Baekjoon/Bronze/2562.%20최댓값)
-[2563](./Baekjoon/Silver/2563.%20색종이)
-[2869](./Baekjoon/Bronze/2869.%20달팽이는%20올라가고%20싶다)
-[2884](./Baekjoon/Bronze/2884.%20알람%20시계)
-[9506](./Baekjoon/Bronze/9506.%20약수들의%20합)
-[10798](./Baekjoon/Bronze/10798.%20세로읽기)
-[10809](./Baekjoon/Bronze/10809.%20알파벳%20찾기)
-[10869](./Baekjoon/Bronze/10869.%20사칙연산)
+[1000](./백준/Bronze/1000.%E2%80%85A＋B)
+[1001](./백준/Bronze/1001.%E2%80%85A－B)
+[1008](./백준/Bronze/1008.%E2%80%85A／B)
+[1085](./백준/Bronze/1085.%E2%80%85직사각형에서%E2%80%85탈출)
+[1157](./백준/Bronze/1157.%E2%80%85단어%E2%80%85공부)
+[1330](./백준/Bronze/1330.%E2%80%85두%E2%80%85수%E2%80%85비교하기)
+[1546](./백준/Bronze/1546.%E2%80%85평균)
+[2438](./백준/Bronze/2438.%E2%80%85별%E2%80%85찍기%E2%80%85－%E2%80%851)
+[2439](./백준/Bronze/2439.%E2%80%85별%E2%80%85찍기%E2%80%85－%E2%80%852)
+[2480](./백준/Bronze/2480.%E2%80%85주사위%E2%80%85세개)
+[2501](./백준/Bronze/2501.%E2%80%85약수%E2%80%85구하기)
+[2525](./백준/Bronze/2525.%E2%80%85오븐%E2%80%85시계)
+[2557](./백준/Bronze/2557.%E2%80%85Hello%E2%80%85World)
+[2562](./백준/Bronze/2562.%E2%80%85최댓값)
+[2563](./백준/Silver/2563.%E2%80%85색종이)
+[2588](./백준/Bronze/2588.%E2%80%85곱셈)
+[2739](./백준/Bronze/2739.%E2%80%85구구단)
+[2750](./백준/Bronze/2750.%E2%80%85수%E2%80%85정렬하기)
+[2753](./백준/Bronze/2753.%E2%80%85윤년)
+[2869](./백준/Bronze/2869.%E2%80%85달팽이는%E2%80%85올라가고%E2%80%85싶다)
+[2884](./백준/Bronze/2884.%E2%80%85알람%E2%80%85시계)
+[8393](./백준/Bronze/8393.%E2%80%85합)
+[9063](./백준/Bronze/9063.%E2%80%85대지)
+[9498](./백준/Bronze/9498.%E2%80%85시험%E2%80%85성적)
+[9506](./백준/Bronze/9506.%E2%80%85약수들의%E2%80%85합)
+[10171](./백준/Bronze/10171.%E2%80%85고양이)
+[10172](./백준/Bronze/10172.%E2%80%85개)
+[10430](./백준/Bronze/10430.%E2%80%85나머지)
+[10798](./백준/Bronze/10798.%E2%80%85세로읽기)
+[10807](./백준/Bronze/10807.%E2%80%85개수%E2%80%85세기)
+[10809](./백준/Bronze/10809.%E2%80%85알파벳%E2%80%85찾기)
+[10818](./백준/Bronze/10818.%E2%80%85최소，%E2%80%85최대)
+[10869](./백준/Bronze/10869.%E2%80%85사칙연산)
+[10871](./백준/Bronze/10871.%E2%80%85X보다%E2%80%85작은%E2%80%85수)
+[10926](./백준/Bronze/10926.%E2%80%85？？！)
+[10950](./백준/Bronze/10950.%E2%80%85A＋B%E2%80%85－%E2%80%853)
+[10951](./백준/Bronze/10951.%E2%80%85A＋B%E2%80%85－%E2%80%854)
+[10952](./백준/Bronze/10952.%E2%80%85A＋B%E2%80%85－%E2%80%855)
+[10998](./백준/Bronze/10998.%E2%80%85A×B)
+[11021](./백준/Bronze/11021.%E2%80%85A＋B%E2%80%85－%E2%80%857)
+[11022](./백준/Bronze/11022.%E2%80%85A＋B%E2%80%85－%E2%80%858)
+[11382](./백준/Bronze/11382.%E2%80%85꼬마%E2%80%85정민)
+[11653](./백준/Bronze/11653.%E2%80%85소인수분해)
+[14215](./백준/Bronze/14215.%E2%80%85세%E2%80%85막대)
+[14681](./백준/Bronze/14681.%E2%80%85사분면%E2%80%85고르기)
+[15552](./백준/Bronze/15552.%E2%80%85빠른%E2%80%85A＋B)
+[18108](./백준/Bronze/18108.%E2%80%851998년생인%E2%80%85내가%E2%80%85태국에서는%E2%80%852541년생？！)
+[25304](./백준/Bronze/25304.%E2%80%85영수증)
+[25314](./백준/Bronze/25314.%E2%80%85코딩은%E2%80%85체육과목%E2%80%85입니다)
