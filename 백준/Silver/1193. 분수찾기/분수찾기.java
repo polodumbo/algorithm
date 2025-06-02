@@ -9,9 +9,6 @@ public class Main {
 
         int count = 1;
         int sum = 0;
-        // 합 = 2, 3, 4, ..
-        // 홀수 = 분자--, 분모++
-        // 짝수 = 분자++, 분모--
         while (X > sum) {
             if (X > sum + count) {
                 sum += count;
