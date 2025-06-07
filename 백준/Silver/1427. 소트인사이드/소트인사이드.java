@@ -8,13 +8,15 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
-        String str = br.readLine();
+        int n = Integer.parseInt(br.readLine());
+
         ArrayList<Integer> numList = new ArrayList<>();
 
-        for (int i = 0; i < str.length(); i++) {
-            char c = str.charAt(i);
-            numList.add((int) c - '0');
+        while (n > 0) {
+            numList.add(n % 10);
+            n /= 10;
         }
+
         Collections.sort(numList);
         Collections.reverse(numList);
         for (int i : numList) {
