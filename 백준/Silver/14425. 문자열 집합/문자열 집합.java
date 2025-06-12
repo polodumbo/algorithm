@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -11,15 +11,16 @@ public class Main {
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
         int count = 0;
-        ArrayList<String> strList = new ArrayList<>();
+
+        HashSet<String> set = new HashSet<>();
 
         for (int i = 0; i < N; i++) {
-            strList.add(br.readLine());
+            set.add(br.readLine());
         }
 
         for (int i = 0; i < M; i++) {
             String str = br.readLine();
-            if (strList.contains(str)) {
+            if (set.contains(str)) {
                 count++;
             }
         }
