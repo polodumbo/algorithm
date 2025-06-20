@@ -13,18 +13,17 @@ public class Main {
         int[] arr = new int[N];
         int max = 0;
         for (int i = 0; i < N; i++) {
-            int n = Integer.parseInt(st.nextToken());
-            if (i < K) {
-                max += n;
-            }
-            arr[i] = n;
+            arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        int pre = max;
+        for (int i = 0; i < K; i++) {
+            max += arr[i];
+        }
+
+        int temp = max;
         for (int i = K; i < N; i++) {
-            int now = pre + arr[i] - arr[i - K];
-            max = Math.max(max, now);
-            pre = now;
+            temp += arr[i] - arr[i - K];
+            max = Math.max(max, temp);
         }
 
         System.out.println(max);
