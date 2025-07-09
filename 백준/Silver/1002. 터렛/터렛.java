@@ -21,11 +21,11 @@ public class Main {
                 sb.append(-1).append('\n');
                 continue;
             }
-
+            
             double d = Math.sqrt(Math.pow(Math.abs(x1 - x2), 2) + Math.pow(Math.abs(y1 - y2), 2));
-            if (d > r1 + r2 || Math.max(r1, r2) > Math.min(r1, r2) + d) {
+            if (d > r1 + r2 || d < Math.abs(r1 - r2)) {
                 sb.append(0);
-            } else if (d == r1 + r2 || d + Math.min(r1, r2) == Math.max(r1, r2)) {
+            } else if (d == r1 + r2 || d == Math.abs(r1 - r2)) {
                 sb.append(1);
             } else {
                 sb.append(2);
