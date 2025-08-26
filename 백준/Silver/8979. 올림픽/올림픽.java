@@ -37,10 +37,14 @@ public class Main {
             }
         });
 
-        int rank = 0;
+        int targetIndex = 0;
         for (int i = 1; i < N; i++) {
             Medal preMedal = medalList.get(i - 1);
             Medal nowMedal = medalList.get(i);
+
+            if (nowMedal.country == K) {
+                targetIndex = i;
+            }
 
             if (preMedal.gold == nowMedal.gold
                 && preMedal.silver == nowMedal.silver
@@ -50,14 +54,9 @@ public class Main {
             } else {
                 nowMedal.rank = i + 1;
             }
-
-            if (nowMedal.country == K) {
-                rank = nowMedal.rank;
-                break;
-            }
         }
 
-        System.out.println(rank);
+        System.out.println(medalList.get(targetIndex).rank);
         br.close();
     }
 
