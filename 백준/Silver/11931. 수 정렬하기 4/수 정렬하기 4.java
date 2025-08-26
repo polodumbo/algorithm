@@ -15,11 +15,11 @@ public class Main {
         for (int i = 0; i < N; i++) {
             list.add(Integer.parseInt(br.readLine()));
         }
-        Collections.sort(list);
+        Collections.sort(list, Collections.reverseOrder());
 
         StringBuilder sb = new StringBuilder();
-        for (int i = N - 1; i >= 0; i--) {
-            sb.append(list.get(i)).append('\n');
+        for (int i : list) {
+            sb.append(i).append('\n');
         }
 
         System.out.println(sb);
