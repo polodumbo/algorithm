@@ -1,31 +1,21 @@
 class Solution {
     public int[] solution(String[] keyinput, int[] board) {
-        int[] dx = {0, 0, -1, 1};
-        int[] dy = {1, -1, 0, 0};
-        int x = 0, y = 0, nx = 0, ny = 0;
+        int[] answer = new int[2];
+        int width = board[0] / 2;
+        int height = board[1] / 2;
         
-        for (String dir : keyinput) {
-            if (dir.equals("up")) {
-                nx = dx[0];
-                ny = dy[0];
-            } else if (dir.equals("down")) {
-                nx = dx[1];
-                ny = dy[1];
-            } else if (dir.equals("left")) {
-                nx = dx[2];
-                ny = dy[2];
-            } else if (dir.equals("right")) {
-                nx = dx[3];
-                ny = dy[3];
+        for(String str: keyinput) {
+            if(str.equals("up") &&  answer[1] < height) {
+                answer[1]++;
+            } else if (str.equals("down") && answer[1] > -height) {
+                answer[1]--;
+            }else if (str.equals("left") && answer[0] > -width) {
+                answer[0]--;
+            }else if (str.equals("right") && answer[0] < width) {
+                answer[0]++;
             }
-            
-            if (Math.abs(x+nx) > board[0]/2 || Math.abs(y+ny) > board[1]/2) {
-                continue;
-            }
-            
-            x += nx;
-            y += ny;
         }
-        return new int[] {x, y};
+
+        return answer;
     }
 }
