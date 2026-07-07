@@ -9,7 +9,6 @@ class Solution {
         for (int i = b - a + 1; i <= b; i++) {
             answer++;
         }
-        // answer += a - 1;
         
         // 나머지 한 변이 제일 긴 변
         // (b + 1) ~ (a + b - 1)
