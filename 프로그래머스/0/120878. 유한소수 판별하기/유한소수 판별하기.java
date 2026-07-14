@@ -18,6 +18,6 @@ class Solution {
             return a;
         }
 	
-	return getGCD(b, a % b);
-}
+	    return getGCD(b, a % b);
+    }
 }
