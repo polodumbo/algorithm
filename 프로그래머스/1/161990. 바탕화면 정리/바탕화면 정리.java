@@ -5,11 +5,12 @@ class Solution {
         int rdx = Integer.MIN_VALUE;
         int rdy = Integer.MIN_VALUE;
         
-        for (int i = 0; i < wallpaper.length; i++) {
-            for (int j = 0; j < wallpaper[0].length(); j++) {
-                char c = wallpaper[i].charAt(j);
-                
-                if (c == '#') {
+        int row = wallpaper.length;
+        int col = wallpaper[0].length();
+        
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                if (wallpaper[i].charAt(j) == '#') {
                     lux = Math.min(i, lux);
                     luy = Math.min(j, luy);
                     rdx = Math.max(i, rdx);
