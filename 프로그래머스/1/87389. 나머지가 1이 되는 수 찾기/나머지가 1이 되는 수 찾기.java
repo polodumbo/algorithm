@@ -1,6 +1,10 @@
 class Solution {
     public int solution(int n) {
-        for (int i = 2; i < n; i++) {
+        if (n % 2 == 1) {
+            return 2;
+        }
+        
+        for (int i = 3; i < n; i += 2) {
             if (n % i == 1) {
                 return i;
             }
