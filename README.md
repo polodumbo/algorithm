@@ -172,7 +172,7 @@
 
 </details>
 
-<details open>
+<details>
 <summary><h2>[백준]</h2></summary>
 
 [1000](./백준/Bronze/1000.%E2%80%85A＋B)
